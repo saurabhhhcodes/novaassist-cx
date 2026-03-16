@@ -140,9 +140,11 @@ async def list_tickets():
     return tickets.get_all_tickets()
 
 # Mount Frontend Static Files (Consolidated Deployment)
-frontend_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "frontend/out")
+frontend_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "static")
 if os.path.exists(frontend_path):
     app.mount("/", StaticFiles(directory=frontend_path, html=True), name="frontend")
+else:
+    print(f"Warning: Static path {frontend_path} not found.")
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8002)
