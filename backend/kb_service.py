@@ -7,8 +7,9 @@ from typing import List, Dict, Any
 class KnowledgeBaseService:
     def __init__(self, nova: NovaClient):
         self.nova = nova
-        self.kb_file = "/home/saurabh/.gemini/antigravity/scratch/novaassist-cx/backend/data/knowledge_base.json"
-        self.embeddings_file = "/home/saurabh/.gemini/antigravity/scratch/novaassist-cx/backend/data/embeddings.npy"
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+        self.kb_file = os.path.join(base_dir, "data", "knowledge_base.json")
+        self.embeddings_file = os.path.join(base_dir, "data", "embeddings.npy")
         self._load_kb()
 
     def _load_kb(self):
