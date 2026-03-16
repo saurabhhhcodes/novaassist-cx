@@ -1,8 +1,13 @@
+import os
+import sys
+
+# Ensure dependencies folder is in path (Critical for App Runner multi-stage builds)
+sys.path.insert(0, os.path.join(os.getcwd(), "dependencies"))
+
 from fastapi import FastAPI, UploadFile, File, Form, HTTPException
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
-import os
 import json
 import re
 from typing import List, Dict, Any, Optional
