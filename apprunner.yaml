@@ -1,0 +1,33 @@
+version: 1.0
+runtime: python-3
+build:
+  commands:
+    - pip install -r requirements.txt
+run:
+  command: python backend/main.py
+instance:
+  cpu: "1 vCPU"
+  memory: "2 GB"
+  env:
+    - name: AWS_ACCESS_KEY_ID
+      value: "UPDATE_IN_CONSOLE"
+    - name: AWS_SECRET_ACCESS_KEY
+      value: "UPDATE_IN_CONSOLE"
+    - name: AWS_REGION
+      value: "us-east-1"
+    - name: S3_BUCKET_NAME
+      value: "novaassist-cx-screenshots"
+    - name: DYNAMODB_TICKETS_TABLE
+      value: "SupportTickets"
+    - name: DYNAMODB_CUSTOMERS_TABLE
+      value: "Customers"
+    - name: DYNAMODB_CHATS_TABLE
+      value: "ConversationsV2"
+    - name: DYNAMODB_ORDERS_TABLE
+      value: "EnterpriseOrders"
+    - name: HUBSPOT_API_KEY
+      value: "UPDATE_IN_CONSOLE"
+    - name: MOCK_SERVICES
+      value: "false"
+    - name: SES_SENDER_EMAIL
+      value: "support@novaassist-cx.com"
