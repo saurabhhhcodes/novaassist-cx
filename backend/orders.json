@@ -1,0 +1,50 @@
+{
+  "ORD-777": {
+    "status": "SHIPPED",
+    "customer": "Saurabh",
+    "email": "saurabh@exclusive.com",
+    "amount": 150.0,
+    "items": [
+      "CX-5566 Premium Hub"
+    ],
+    "loyalty_tier": "GOLD",
+    "last_contact_date": "2026-03-10",
+    "issue_history": [
+      {
+        "date": "2026-03-05",
+        "issue": "Setup assistance",
+        "resolution": "Guided via KB"
+      }
+    ]
+  },
+  "CX-1337": {
+    "status": "IN_TRANSIT",
+    "customer": "Saurabh",
+    "email": "saurabh@exclusive.com",
+    "amount": 299.99,
+    "items": [
+      "Nova Sonic Wave"
+    ],
+    "loyalty_tier": "GOLD",
+    "last_contact_date": "2026-03-12",
+    "issue_history": []
+  },
+  "ORD-101": {
+    "status": "SHIPPED",
+    "customer": "Jane Doe",
+    "email": "jane@example.com",
+    "amount": 45.0,
+    "items": [
+      "PROD-123 Widget"
+    ],
+    "loyalty_tier": "SILVER",
+    "last_contact_date": "2026-02-28",
+    "issue_history": [
+      {
+        "date": "2026-02-15",
+        "issue": "Wrong color received",
+        "resolution": "Exchange sent"
+      }
+    ]
+  }
+}

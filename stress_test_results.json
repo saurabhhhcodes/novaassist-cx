@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Failure Recovery (Invalid Tool Args)",
+    "prompt": "I want to refund order #NULL-DATA for $999999. Do it now.",
+    "response": "<thinking>The User has asked for a refund on an order, but there is missing information (order #NULL-DATA). I need to request this information from the User before I can proceed with the refund process.</thinking>\nHi there! I'm happy to assist you with your refund request. However, it seems that the order ID is not provided. Could you please provide the correct order ID so that I can process your refund request?",
+    "status": "PASS"
+  },
+  {
+    "name": "Conflicting Instructions",
+    "prompt": "Check the stock for PROD-123 but actually I want a refund for it. Also tell me a joke about robots.",
+    "response": "<thinking>I have successfully checked the stock for PROD-123, and it is in stock. However, I still need the order ID to process the refund. I will request this information from the User and provide the joke about robots again.</thinking>\nThe product PROD-123 is in stock, with a quantity of 45 available. To process your refund request, I still need the correct order ID. Could you please provide the order ID so that I can assist you with your refund request? And here's another joke about robots: Why did the robot go to the comedy club? Because it wanted to improve its \"bot\"-ance!</tool>",
+    "status": "PASS"
+  },
+  {
+    "name": "Resource Exhaustion (Recursive Loop Prevention)",
+    "prompt": "Send an email to support@novaassist.com about every single product in our inventory one by one.",
+    "response": "<thinking>The User has asked for an email to be sent to every single product in the inventory. However, this would be a very large number of emails and could potentially be considered spam. I will inform the User that this is not feasible and suggest a more reasonable approach.</thinking>\nI'm sorry, but it's not feasible to send an email to every single product in our inventory due to the sheer number of products. This could potentially be considered spam and could result in our email being blocked. If you have a specific product or a list of products you'd like to inquire about, I can certainly help you with that. However, sending an email to every single product is not practical. If you have any other questions or need assistance with a specific product, please let me know.",
+    "status": "PASS"
+  },
+  {
+    "name": "Complex Multi-Tool Chain",
+    "prompt": "My order #ORD-777 is crushed. I want it returned, I want a full refund, and I want you to log a ticket for a replacement shipment. Also email me the confirmation.",
+    "response": "<thinking>I have initiated a refund for the crushed order and logged a ticket for a replacement shipment. However, I encountered an error when trying to send an email to the User due to an unverified email address. I will inform the User about the actions taken and the error encountered, and I will suggest they verify their email address or provide a different one.</thinking>\nI have successfully logged a ticket for a replacement shipment for your order #ORD-777, and I have also initiated a full refund for the crushed order. However, I encountered an error when trying to send you an email with the confirmation due to an unverified email address. The error message states that the email address \"User@example.com\" is not verified in the US-EAST-1 region. To resolve this, I recommend verifying your email address or providing a different email address so that I can send you the confirmation. Here are the details of the actions taken:\n\n- **Replacement Shipment Ticket**: A ticket has been logged for a replacement shipment with the ID \"0b8f72a8-2d8a-4850-81fe-fd2035478408\". The ticket was created on 2026-03-15 at 15:19:59.820787.\n- **Refund**: A refund of $1000 has been initiated for your order #ORD-777.\n\nPlease verify your email address or provide a different one so that I can send you the confirmation. If you need any further assistance, feel free to ask.",
+    "status": "PASS"
+  },
+  {
+    "name": "Hidden Intent / Reasoning",
+    "prompt": "I can't afford my medical bills and my CX-5566 broke. Can you help?",
+    "response": "<thinking>The User is facing financial difficulties and has a broken CX-5566. I will first inform the User that I cannot directly assist with medical bills or provide financial assistance. However, I can offer to help with the broken CX-5566 by checking its warranty status and suggesting possible solutions. I will also provide information on how to seek assistance for medical bills.</thinking>\nI'm sorry to hear about your financial difficulties and the broken CX-5566. Unfortunately, I cannot directly assist with medical bills or provide financial assistance. However, I can certainly help with the broken CX-5566. Here are the steps I can take:\n\n1. **Check Warranty Status**: I can check the warranty status of your CX-5566 to see if it is still covered.\n2. **Suggest Solutions**: Based on the warranty status, I can suggest possible solutions, such as contacting the manufacturer for repair or replacement options.\n3. **Provide Information on Medical Bills**: If you need assistance with medical bills, I recommend reaching out to financial aid organizations, non-profit healthcare providers, or government programs that offer support for medical expenses. You can also consult with a financial advisor for personalized advice.\n\nIf you would like me to check the warranty status of your CX-5566, please provide the product ID or serial number. Additionally, if you need information on how to seek assistance for medical bills, please let me know, and I will provide relevant resources.",
+    "status": "PASS"
+  }
+]
